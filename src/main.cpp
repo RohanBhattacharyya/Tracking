@@ -9,6 +9,7 @@
 #include "vex.h"
 #include <iostream>
 #include <fstream>  
+using namespace std;
 using namespace vex;
 
 // A global instance of vex::brain used for printing to the V5 brain screen
@@ -21,7 +22,7 @@ distance leftSensor = distance(PORT18);
 
 
 int main() {
-
-    std::cout << "sigma string";
-
+    while (true) {
+        Brain.Screen.printAt(10, 50, (rightSensor.value()));
+    }
 }
