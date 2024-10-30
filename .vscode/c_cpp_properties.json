@@ -18,7 +18,8 @@
             "name": "Win32",
             "includePath": [
                 "${vex_sdkIncludes}",
-                "C:/Users/Rohan/AppData/Roaming/Code/User/globalStorage/vexrobotics.vexcode/sdk/cpp/V5/V5_20240223_11_00_00/vexv5/gcc/include/c++/4.9.3/debug"
+                "C:/Users/Rohan/AppData/Roaming/Code/User/globalStorage/vexrobotics.vexcode/sdk/cpp/V5/V5_20240223_11_00_00/vexv5/gcc/include/c++/4.9.3/debug",
+                "${workspaceFolder}/include"
             ],
             "compilerPath": "${vex_compilerPath}",
             "cStandard": "gnu99",
