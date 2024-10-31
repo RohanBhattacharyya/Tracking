@@ -1,4 +1,3 @@
-#include "functions.h"
 #include "init.h"
 #include "vex.h"
 using namespace vex;
