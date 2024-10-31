@@ -18,7 +18,7 @@ int main() {
     Brain.Screen.print("Test 1\n");
     Brain.Screen.print("Test 2\n");
     
-    while (true){
+    while (true) {
         if (leftSensor.isObjectDetected()){
             Brain.Screen.print("Left Sensor: Object Detected\n");
 
@@ -32,7 +32,7 @@ int main() {
 
         if (rightSensor.isObjectDetected()){
             Brain.Screen.print("Right Sensor: Object Detected\n");
-             while (!middleSensor.isObjectDetected()){
+            while (!middleSensor.isObjectDetected()){
                 move("left", 50);
             }
             wait(0.1, seconds);
