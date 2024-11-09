@@ -8,36 +8,26 @@
 /*----------------------------------------------------------------------------*/
 #include "vex.h"
 #include <iostream>
-#include <fstream>  
+#include <fstream>
 #include "functions.h"
 #include "init.h"
 using namespace vex;
 
-int main() {
-    // move("forward", 50);
-    Brain.Screen.print("Test 1\n");
-    Brain.Screen.print("Test 2\n");
-    
-    while (true) {
-        if (leftSensor.isObjectDetected()){
-            Brain.Screen.print("Left Sensor: Object Detected\n");
-
-            while (!middleSensor.isObjectDetected()){
-                move("right", 50);
-            }
-            wait(0.1, seconds);
+int main()
+{
+    while (true)
+    {
+        if (middleSensor.isObjectDetected())
+        {
             stop();
-            Brain.Screen.print("Stopped turning right\n");
         }
-
-        if (rightSensor.isObjectDetected()){
-            Brain.Screen.print("Right Sensor: Object Detected\n");
-            while (!middleSensor.isObjectDetected()){
-                move("left", 50);
-            }
-            wait(0.1, seconds);
-            stop();
-            Brain.Screen.print("Stopped turning left\n");
+        else if (rightSensor.isObjectDetected())
+        {
+            move("right", 10);
+        }
+        else if (leftSensor.isObjectDetected())
+        {
+            move("left", 10);
         }
     }
 }
