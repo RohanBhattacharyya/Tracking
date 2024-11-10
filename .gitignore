@@ -1,5 +1,8 @@
 /bin
 /build
 compile_commands.json
-.vscode/
-.vscode/
+.vscode/*
+/.vscode
+/.vscode
+.vscode/settings.json
+.vscode/c_cpp_properties.json
